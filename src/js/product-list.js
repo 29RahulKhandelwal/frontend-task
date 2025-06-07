@@ -158,21 +158,19 @@ function displayTable() {
         webflow:
           "https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/Webflow.svg",
         facebook:
-          "https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/facebook.svg",
+          "https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/Facebook.svg",
         twitter:
-          "https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/twitter.svg",
+          "https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/Twitter.svg",
         youtube:
-          "https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/youtube.svg",
+          "https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/Youtube.svg",
         reddit:
-          "https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/reddit.svg",
+          "https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/Reddit.svg",
         spotify:
-          "https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/spotify.svg",
+          "https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/Spotify.svg",
         twitch:
-          "https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/twitch.svg",
+          "https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/Twitch.svg",
         pinterest:
-          "https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/pinterest.svg",
-        apple:
-          "https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/Apple.svg",
+          "https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/Pinterest.svg",
       }[String(item.company).toLowerCase()] || ""
     } 
     alt="company-logo"
