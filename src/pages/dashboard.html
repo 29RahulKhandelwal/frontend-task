@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/src/styling/main.css" />
+    <link rel="stylesheet" href="/src/styling/dashboard.css" />
+    <link
+      rel="shortcut icon"
+      href="/src/assets/sidebar/images/Logo.svg"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="sidebar close d-flex-col">
+        <div class="sidebar__top">
+          <header class="d-flex-center">
+            <div>
+              <div class="sidebar__image--text d-flex-center">
+                <span class="sidebar__image">
+                  <img src="/src/assets/sidebar/images/Logo.svg" alt="logo" />
+                </span>
+                <div class="sidebar__image--text sidebar--text">Dashdark X</div>
+              </div>
+            </div>
+            <img
+              src="/src/assets/sidebar/icons/chevron-left.svg"
+              alt="chevron-left-icon"
+              class="sidebar--toggle"
+            />
+          </header>
+          <div class="sidebar__menu">
+            <div class="sidebar__menu--bar">
+              <ul class="sidebar__nav--links">
+                <li class="sidebar__nav--link selected d-flex-center">
+                  <a href="/src/pages/dashboard.html" class="d-flex-center">
+                    <svg
+                      class="icon"
+                      width="14"
+                      height="40"
+                      viewBox="0 0 14 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 19.3335C0 18.9128 0.181487 18.5122 0.498755 18.2324L6.01055 13.373C6.57464 12.8757 7.42536 12.8757 7.98945 13.373L13.5012 18.2324C13.8185 18.5122 14 18.9128 14 19.3335V25.5259C14 26.34 13.3337 27 12.5118 27H1.4882C0.666291 27 0 26.34 0 25.5259V19.3335Z"
+                      />
+                    </svg>
+                    <span class="sidebar--text"> Dashboard </span>
+                  </a>
+                </li>
+                <li class="sidebar__nav--link d-flex-center">
+                  <a href="/src/pages/product-list.html" class="d-flex-center">
+                    <svg
+                      class="icon"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.57785 0.561451C6.7663 0.237899 7.23373 0.237898 7.42218 0.56145L9.4187 3.98926C9.48773 4.10778 9.60341 4.19183 9.73746 4.22086L13.6145 5.06041C13.9804 5.13965 14.1249 5.5842 13.8754 5.86341L11.2323 8.82146C11.1409 8.92375 11.0967 9.05973 11.1105 9.1962L11.5101 13.1429C11.5479 13.5154 11.1697 13.7902 10.8271 13.6392L7.19702 12.0395C7.07151 11.9842 6.92852 11.9842 6.80301 12.0395L3.17297 13.6392C2.83033 13.7902 2.45218 13.5154 2.4899 13.1429L2.8895 9.1962C2.90331 9.05973 2.85913 8.92375 2.76774 8.82146L0.124656 5.86341C-0.124825 5.5842 0.0196157 5.13965 0.385566 5.06041L4.26257 4.22086C4.39662 4.19183 4.5123 4.10778 4.58133 3.98926L6.57785 0.561451Z"
+                      />
+                    </svg>
+                    <span class="sidebar--text"> Product List </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar__bottom">
+          <div class="sidebar__menu--user">
+            <div class="d-flex-center">
+              <div class="user d-flex-center">
+                <img src="/src/assets/sidebar/images/user.svg" alt="user" />
+                <span class="sidebar--text user--name">John Carter</span>
+              </div>
+              <img
+                src="/src/assets/sidebar/icons/chevron-right.svg"
+                alt="chevron-right-icon"
+                class="user--chevron-right"
+              />
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <section class="dashboard">
+        <div>
+          <h2 class="dashboard--title">Welcome back, John</h2>
+          <p class="dashboard--description">
+            Measure your advertising ROI and report website traffic.
+          </p>
+        </div>
+        <div class="overflow">
+          <div class="stats d-flex-center">
+            <div class="stats__card d-flex-col">
+              <div class="top d-flex-center">
+                <img
+                  src="/src/assets/dashboard/icons/views.svg"
+                  alt="stat-icon"
+                />
+                <span class="card--title">Pageviews</span>
+              </div>
+              <div class="bottom d-flex-center">
+                <h4 class="card--stat">50.8K</h4>
+                <span class="d-flex-center card--stat--overview positive--stat">
+                  28.4%
+                  <img
+                    src="/src/assets/dashboard/icons/arrrow-external-right-green.svg"
+                    alt="arrow-right-icon"
+                  />
+                </span>
+              </div>
+            </div>
+            <div class="stats__card d-flex-col">
+              <div class="top d-flex-center">
+                <img
+                  src="/src/assets/dashboard/icons/user.svg"
+                  alt="stat-icon"
+                />
+                <span class="card--title">Monthly users</span>
+              </div>
+              <div class="bottom d-flex-center">
+                <h4 class="card--stat">23.6K</h4>
+                <span class="d-flex-center card--stat--overview negative--stat">
+                  12.6%
+                  <img
+                    src="/src/assets/dashboard/icons/arrow-external-right-red.svg"
+                    alt="arrow-right-icon"
+                  />
+                </span>
+              </div>
+            </div>
+            <div class="stats__card d-flex-col">
+              <div class="top d-flex-center">
+                <img
+                  src="/src/assets/dashboard/icons/new-signups.svg"
+                  alt="stat-icon"
+                />
+                <span class="card--title">New sign ups</span>
+              </div>
+              <div class="bottom d-flex-center">
+                <h4 class="card--stat">756</h4>
+                <span class="d-flex-center card--stat--overview positive--stat">
+                  3.1%
+                  <img
+                    src="/src/assets/dashboard/icons/arrrow-external-right-green.svg"
+                    alt="arrow-right-icon"
+                  />
+                </span>
+              </div>
+            </div>
+            <div class="stats__card d-flex-col">
+              <div class="top d-flex-center">
+                <img
+                  src="/src/assets/dashboard/icons/star.svg"
+                  alt="stat-icon"
+                />
+                <span class="card--title">Subscriptions</span>
+              </div>
+              <div class="bottom d-flex-center">
+                <h4 class="card--stat">2.3K</h4>
+                <span class="d-flex-center card--stat--overview positive--stat">
+                  11.3%
+                  <img
+                    src="/src/assets/dashboard/icons/arrrow-external-right-green.svg"
+                    alt="arrow-right-icon"
+                  />
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="charts">
+            <div class="left">
+              <div class="d-flex-center">
+                <div class="charts--total-revenue">
+                  <span>Total revenue</span>
+                  <div class="d-flex-center">
+                    <h6 id="total-revenue">$1669.0k</h6>
+                    <span
+                      class="d-flex-center card--stat--overview positive--stat"
+                    >
+                      24.6%
+                      <img
+                        src="/src/assets/dashboard/icons/arrrow-external-right-green.svg"
+                        alt="arrow-right-icon"
+                      />
+                    </span>
+                  </div>
+                </div>
+                <!-- Spline Chart DropDown Selector Starts-->
+                <div class="dropdown-container">
+                  <div class="dropdown-button" id="dropdownButton">
+                    <span class="label">
+                      <img
+                        src="/src/assets/dashboard/icons/calender.svg"
+                        alt="calendar icon"
+                      />
+                      <span id="selectedText">Jan 2025 - Dec 2025</span>
+                    </span>
+                    <img
+                      src="/src/assets/dashboard/icons/chevron-down.svg"
+                      alt="chevron-down"
+                    />
+                  </div>
+                  <div class="dropdown-list" id="dropdownList">
+                    <div class="selected">Jan 2025 - Dec 2025</div>
+                    <div>Jan 2024 - Dec 2024</div>
+                    <div>Jan 2023 - Dec 2023</div>
+                  </div>
+                </div>
+                <!-- Spline Chart DropDown Selector Ends-->
+              </div>
+              <div class="chart--spline"></div>
+            </div>
+            <div class="right d-flex-col">
+              <div class="column-chart">
+                <div class="column-chart--profit">
+                  <div class="d-flex-center">
+                    <img
+                      src="/src/assets/dashboard/icons/graph.svg"
+                      alt="graph-icon"
+                    />
+                    <span>Total profit</span>
+                  </div>
+                  <div class="d-flex-center">
+                    <h6>$144.6K</h6>
+                    <span
+                      class="d-flex-center card--stat--overview positive--stat"
+                    >
+                      28.5%
+                      <img
+                        src="/src/assets/dashboard/icons/arrrow-external-right-green.svg"
+                        alt="arrow-right-icon"
+                      />
+                    </span>
+                  </div>
+                </div>
+                <div>
+                  <div id="render-column-chart"></div>
+                </div>
+                <div class="column-chart--duration">Last 12 months</div>
+              </div>
+              <div class="line-chart">
+                <div class="line-chart--session">
+                  <div class="d-flex-center">
+                    <img
+                      src="/src/assets/dashboard/icons/session.svg"
+                      alt="graph-icon"
+                    />
+                    <span>Total sessions</span>
+                  </div>
+                  <div class="d-flex-center">
+                    <h6>400</h6>
+                    <span
+                      class="d-flex-center card--stat--overview positive--stat"
+                    >
+                      16.8%
+                      <img
+                        src="/src/assets/dashboard/icons/arrrow-external-right-green.svg"
+                        alt="arrow-right-icon"
+                      />
+                    </span>
+                  </div>
+                </div>
+                <div>
+                  <div id="render-line-chart"></div>
+                </div>
+                <div class="line-chart--duration d-flex-center">
+                  <span
+                    class="d-flex-center card--stat--overview positive--stat"
+                  >
+                    <img
+                      src="/src/assets/dashboard/icons/green-circle.svg"
+                      alt="arrow-right-icon"
+                    />
+                    Live
+                  </span>
+                  <div>10k visitors</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Apex-Charts -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <script src="/src/js/main.js"></script>
+    <script src="/src/js/dashboard.js"></script>
+  </body>
+</html>

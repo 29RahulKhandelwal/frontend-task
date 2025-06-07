@@ -1,0 +1,409 @@
+:root {
+  /* Background */
+  --primary-bg: #081028;
+  --secondary-bg-color: #0b1739;
+  --light-green-bg: rgba(5, 193, 104, 0.2);
+  --light-red-bg: rgba(255, 90, 101, 0.2);
+  --dropdown-bg: #0a1330;
+  --dropdown-bg: #0a1330;
+  --dropdown-scroll-bg: #cb3cff;
+
+  /* Text Color */
+  --primary-color: #ffffff;
+  --secondary-color: #aeb9e1;
+  --secondary-color: rgba(174, 185, 225, 1);
+  --selected-color: rgba(203, 60, 255, 1);
+  --green-color: rgba(20, 202, 116, 1);
+  --red-color: rgba(255, 90, 101, 1);
+
+  /* Border */
+  --primary-border: #0b1739;
+  --secondary-border: #343b4f;
+  --green-border: rgba(5, 193, 104, 0.2);
+  --red-border: rgba(255, 90, 101, 0.2);
+
+  /* Transitions */
+  --tran-02: all 0.2s ease;
+  --tran-03: all 0.3s ease;
+  --tran-04: all 0.4s ease;
+  --tran-05: all 0.5s ease;
+}
+
+.dashboard {
+  position: relative;
+  left: 300px;
+  height: 100vh;
+  width: calc(100% - 300px);
+  transition: var(--tran-05);
+  padding: 1.5rem 2rem 1rem 2rem;
+}
+
+.sidebar.close ~ .dashboard {
+  left: 88px;
+  width: calc(100% - 88px);
+}
+
+.dashboard > div > .dashboard--title {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.dashboard > div > .dashboard--description {
+  color: var(--secondary-color);
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.stats {
+  margin-top: 1.5rem;
+  gap: 1rem;
+}
+
+.stats__card {
+  height: 130px;
+  width: 252px;
+  border: 0.6px solid var(--secondary-border);
+  background-color: var(--secondary-bg-color);
+  border-radius: 8px;
+  padding: 1.2rem 1rem;
+  flex: 1;
+}
+
+.stats__card > .top {
+  gap: 0.4rem;
+}
+
+.stats__card > .top > .card--title {
+  color: var(--secondary-color);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.stats__card > .bottom {
+  margin-top: 1.5rem;
+  gap: 0.4rem;
+}
+
+.stats__card > .bottom > .card--stat {
+  color: var(--primary-color);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.stats__card > .bottom > .card--stat--overview,
+.charts--total-revenue > div > .card--stat--overview,
+.column-chart--profit > div:nth-child(2) > span,
+.line-chart--session > div:nth-child(2) > span,
+.line-chart--duration > .card--stat--overview {
+  height: 18px;
+  width: 47px;
+  border-radius: 2px;
+  color: var(--green-color);
+  border: 0.6px solid var(--green-border);
+  background-color: var(--light-green-bg);
+  font-size: 10px;
+  font-weight: 500;
+  justify-content: center;
+  gap: 0.15rem;
+}
+
+.line-chart--duration > .card--stat--overview {
+  width: 35px;
+}
+
+.stats__card > .bottom > .positive--stat,
+.charts--total-revenue > div > .positive--stat,
+.column-chart--profit > div:nth-child(2) > .positive--stat,
+.line-chart--session > div:nth-child(2) > .positive--stat,
+.line-chart--duration > .positive--stat {
+  color: var(--green-color);
+  border: 0.6px solid var(--green-border);
+  background-color: var(--light-green-bg);
+}
+
+.stats__card > .bottom > .negative--stat {
+  color: var(--red-color);
+  border: 0.6px solid var(--red-border);
+  background-color: var(--light-red-bg);
+}
+
+.dashboard > .overflow > .charts {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  width: 100%;
+}
+
+.dashboard > .overflow > .charts > .left,
+.dashboard > .overflow > .charts > .right {
+  overflow: hidden;
+}
+
+.dashboard > .overflow > .charts > .left {
+  background-color: var(--secondary-bg-color);
+  border: 0.6px solid var(--secondary-border);
+  box-shadow: 1px 1px 1px 0 rgba(16, 25, 52, 0.4);
+  border-radius: 12px 0 0 12px;
+  padding: 1.5rem;
+}
+
+.dashboard > .overflow > .charts > .left > div {
+  justify-content: space-between;
+}
+
+.charts--total-revenue > span {
+  color: var(--secondary-color);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.charts--total-revenue > div {
+  gap: 0.5rem;
+}
+
+.charts--total-revenue > div > h6 {
+  color: var(--primary-color);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.numInputWrapper span {
+  display: none !important;
+}
+
+.apexcharts-legend {
+  gap: 0.7rem;
+}
+
+.apexcharts-legend-series {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+/* Month Range Ends */
+
+.dashboard > .overflow > .charts > .right {
+  background-color: var(--secondary-bg-color);
+  border: 0.6px solid var(--secondary-border);
+  border-radius: 0 12px 12px 0;
+}
+
+.dashboard > .overflow > .charts > .right > .column-chart {
+  border-bottom: 0.6px solid var(--secondary-border);
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.column-chart--profit {
+  position: relative;
+}
+
+.column-chart--profit > div:nth-child(1),
+.line-chart--session > div:nth-child(1) {
+  gap: 0.3rem;
+}
+
+.column-chart--profit > div:nth-child(1) > span,
+.line-chart--session > div:nth-child(1) > span {
+  color: var(--secondary-color);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.column-chart--profit > div:nth-child(2),
+.line-chart--session > div:nth-child(2) {
+  gap: 0.5rem;
+}
+
+.column-chart--profit > div:nth-child(2) > h6,
+.line-chart--session > div:nth-child(2) > h6 {
+  color: var(--primary-color);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+#render-column-chart {
+  margin-top: -25px;
+}
+
+.column-chart > .column-chart--duration {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--secondary-color);
+  margin-top: -30px;
+}
+
+/* Column Chart Styling Starts */
+.apexcharts-bar-series.apexcharts-plot-series
+  > .apexcharts-series
+  > path:nth-child(odd) {
+  fill: #cb3cff !important;
+}
+
+.apexcharts-bar-series.apexcharts-plot-series
+  > .apexcharts-series
+  > path:nth-child(even) {
+  fill: #00c2ff !important;
+}
+/* Column Chart Styling Ends */
+
+/* Line Chart Styling Starts */
+.dashboard > .overflow > .charts > .right > .line-chart {
+  flex: 1;
+  padding: 1.5rem;
+}
+
+#render-line-chart {
+  margin-top: -20px;
+}
+
+.line-chart--duration {
+  gap: 0.3rem;
+}
+
+.line-chart--duration > div {
+  color: var(--secondary-color);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.dropdown-container {
+  width: 180px;
+  position: relative;
+}
+
+.dropdown-button {
+  background-color: var(--dropdown-bg);
+  border: 0.6px solid var(--primary-border);
+  box-shadow: 1px 1px 1px rgba(16, 25, 52, 0.4);
+  color: white;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown-button .label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dropdown-button > .label > #selectedText {
+  color: var(--secondary-color);
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.dropdown-button img {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0.8);
+}
+
+.dropdown-list {
+  background-color: var(--dropdown-bg);
+  color: white;
+  border-radius: 10px;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  right: 0;
+  max-height: 160px;
+  overflow-y: auto;
+  z-index: 999;
+  box-shadow: 1px 1px 1px rgba(16, 25, 52, 0.4);
+  display: none;
+}
+
+.dropdown-list.active {
+  display: block;
+}
+
+.dropdown-list div {
+  padding: 10px 12px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--secondary-color);
+}
+
+.dropdown-list div:hover,
+.dropdown-list .selected {
+  background-color: var(--secondary-bg-color);
+  color: var(--primary-color);
+}
+
+.dropdown-list .selected::after {
+  content: url("/src/assets/dashboard/icons/tick.svg");
+  position: absolute;
+  right: 15px;
+}
+
+/* Scrollbar */
+.dropdown-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.dropdown-list::-webkit-scrollbar-thumb {
+  background: var(--dropdown-scroll-bg);
+  border-radius: 4px;
+}
+
+.dropdown-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@media only screen and (max-width: 768px) {
+  .stats {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .dashboard {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dashboard > .overflow {
+    flex: 1;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .dashboard > .overflow::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+  }
+
+  .dashboard > .overflow > .charts {
+    grid-template-columns: 100%;
+    gap: 1rem;
+  }
+
+  .dashboard > .overflow > .charts > .left,
+  .dashboard > .overflow > .charts > .right {
+    border-radius: 12px;
+  }
+
+  .dashboard > .overflow > .charts > .right {
+    gap: 1rem;
+  }
+
+  .dashboard > .overflow > .charts > .right {
+    background-color: transparent;
+    border: none;
+  }
+
+  .dashboard > .overflow > .charts > .right > .column-chart,
+  .dashboard > .overflow > .charts > .right > .line-chart {
+    border-radius: 12px;
+    background-color: var(--secondary-bg-color);
+    border: 0.6px solid var(--secondary-border);
+  }
+}

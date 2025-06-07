@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product List</title>
+    <link rel="stylesheet" href="/src/styling/main.css" />
+    <link rel="stylesheet" href="/src/styling/product-list.css" />
+    <link
+      rel="shortcut icon"
+      href="/src/assets/sidebar/images/Logo.svg"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <nav class="sidebar close d-flex-col">
+        <div class="sidebar__top">
+          <header class="d-flex-center">
+            <div>
+              <div class="sidebar__image--text d-flex-center">
+                <span class="sidebar__image">
+                  <img src="/src/assets/sidebar/images/Logo.svg" alt="logo" />
+                </span>
+                <div class="sidebar__image--text sidebar--text">Dashdark X</div>
+              </div>
+            </div>
+            <img
+              src="/src/assets/sidebar/icons/chevron-left.svg"
+              alt="chevron-left-icon"
+              class="sidebar--toggle"
+            />
+          </header>
+          <div class="sidebar__menu">
+            <div class="sidebar__menu--bar">
+              <ul class="sidebar__nav--links">
+                <li class="sidebar__nav--link d-flex-center">
+                  <a href="/src/pages/dashboard.html" class="d-flex-center">
+                    <svg
+                      class="icon"
+                      width="14"
+                      height="40"
+                      viewBox="0 0 14 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 19.3335C0 18.9128 0.181487 18.5122 0.498755 18.2324L6.01055 13.373C6.57464 12.8757 7.42536 12.8757 7.98945 13.373L13.5012 18.2324C13.8185 18.5122 14 18.9128 14 19.3335V25.5259C14 26.34 13.3337 27 12.5118 27H1.4882C0.666291 27 0 26.34 0 25.5259V19.3335Z"
+                      />
+                    </svg>
+                    <span class="sidebar--text"> Dashboard </span>
+                  </a>
+                </li>
+                <li class="sidebar__nav--link d-flex-center selected">
+                  <a href="/src/pages/product-list.html" class="d-flex-center">
+                    <svg
+                      class="icon"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.57785 0.561451C6.7663 0.237899 7.23373 0.237898 7.42218 0.56145L9.4187 3.98926C9.48773 4.10778 9.60341 4.19183 9.73746 4.22086L13.6145 5.06041C13.9804 5.13965 14.1249 5.5842 13.8754 5.86341L11.2323 8.82146C11.1409 8.92375 11.0967 9.05973 11.1105 9.1962L11.5101 13.1429C11.5479 13.5154 11.1697 13.7902 10.8271 13.6392L7.19702 12.0395C7.07151 11.9842 6.92852 11.9842 6.80301 12.0395L3.17297 13.6392C2.83033 13.7902 2.45218 13.5154 2.4899 13.1429L2.8895 9.1962C2.90331 9.05973 2.85913 8.92375 2.76774 8.82146L0.124656 5.86341C-0.124825 5.5842 0.0196157 5.13965 0.385566 5.06041L4.26257 4.22086C4.39662 4.19183 4.5123 4.10778 4.58133 3.98926L6.57785 0.561451Z"
+                      />
+                    </svg>
+                    <span class="sidebar--text"> Product List </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar__bottom">
+          <div class="sidebar__menu--user">
+            <div class="d-flex-center">
+              <div class="user d-flex-center">
+                <img src="/src/assets/sidebar/images/user.svg" alt="user" />
+                <span class="sidebar--text user--name">John Carter</span>
+              </div>
+              <img
+                src="/src/assets/sidebar/icons/chevron-right.svg"
+                alt="chevron-right-icon"
+                class="user--chevron-right"
+              />
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Product -->
+      <section class="product-list d-flex-col">
+        <!-- Product List Header Starts -->
+        <div>
+          <header class="product-list--header d-flex-center">
+            <div class="d-flex-center">
+              <div class="heading">
+                <h2>Product List</h2>
+              </div>
+              <div class="product-list--searchbar d-flex-center">
+                <img
+                  src="/src/assets/product-list/icons/magnifier.svg"
+                  alt="magnifier-icon"
+                />
+                <input
+                  id="searchInput"
+                  type="text"
+                  placeholder="Search for product..."
+                  class="search"
+                  oninput="handleSearch()"
+                />
+              </div>
+            </div>
+            <div class="btn">
+              <button
+                class="btn--add-new-product reusable-btn-style add-product-btn"
+                onclick="openModal()"
+              >
+                Add New Product
+              </button>
+            </div>
+          </header>
+        </div>
+
+        <!-- Product List Table Starts -->
+        <div class="product__table--overflow">
+          <div class="product__table--header d-flex-center">
+            <h4 class="heading">All Products</h4>
+            <div class="product__table--rowInfo"></div>
+          </div>
+          <div class="product__table--Container">
+            <table id="product__table">
+              <thead>
+                <tr>
+                  <th>
+                    <input
+                      type="checkbox"
+                      id="selectAll"
+                      onclick="toggleAll(this)"
+                    />
+                  </th>
+                  <th class="sortable" onclick="sortTable('name', this)">
+                    <div class="d-flex-center">
+                      <img
+                        src="/src/assets/product-list/icons/star.svg"
+                        alt="star-icon"
+                      />
+                      Product Name
+                    </div>
+                  </th>
+                  <th class="sortable" onclick="sortTable('category', this)">
+                    <div class="d-flex-center">
+                      <img
+                        src="/src/assets/product-list/icons/shopping-bag.svg"
+                        alt="category"
+                      />
+                      Category
+                    </div>
+                  </th>
+                  <th class="sortable" onclick="sortTable('price', this)">
+                    <div class="d-flex-center">
+                      <img
+                        src="/src/assets/product-list/icons/dollar.svg"
+                        alt="dollar"
+                      />
+                      Price
+                    </div>
+                  </th>
+                  <th class="sortable" onclick="sortTable('company', this)">
+                    <div class="d-flex-center">
+                      <img
+                        src="/src/assets/product-list/icons/bag.svg"
+                        alt="bag-icon"
+                      />
+                      Company
+                    </div>
+                  </th>
+                  <th class="sortable" onclick="sortTable('status', this)">
+                    <div class="d-flex-center">
+                      <img
+                        src="/src/assets/product-list/icons/check.svg"
+                        alt="status-icon"
+                      />
+                      Status
+                    </div>
+                  </th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="product__table--body"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Product List Table Pagination -->
+        <div class="pagination">
+          <div class="product__table--rowInfo"></div>
+          <div class="d-flex-center">
+            <div class="row-selector d-flex-center">
+              <span>Rows per page:</span>
+              <select id="rowsPerPage" onchange="changeRowsPerPage(this.value)">
+                <option value="5">5</option>
+                <option value="10" selected>10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+              </select>
+            </div>
+
+            <div class="pagination-buttons d-flex-center">
+              <button onclick="prevPage()" id="prevBtn" class="d-flex-center">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.68555 2.06458L1.75004 7.00008L6.68555 11.9356"
+                    stroke="#7E89AC"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M1.75005 7L12.25 7"
+                    stroke="#7E89AC"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <button onclick="nextPage()" id="nextBtn" class="d-flex-center">
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.31445 1.06458L11.25 6.00008L6.31445 10.9356"
+                    stroke="#7E89AC"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M11.2499 6L0.75 6"
+                    stroke="#7E89AC"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Add Product Modal -->
+      <div id="productModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn" onclick="closeModal()"
+            ><img src="/src/assets/modal/icons/cross.svg" alt="cross-icon"
+          /></span>
+          <h2 class="modal-title">Add new product</h2>
+
+          <div class="modal-fields">
+            <div>
+              <label class="modal-label d-flex-center"
+                ><img
+                  src="/src/assets/modal/icons/star.svg"
+                  alt="product-name"
+                />
+                Product name</label
+              >
+              <input
+                type="text"
+                id="productName"
+                class="modal-input"
+                placeholder="Enter product name"
+              />
+            </div>
+            <div>
+              <label class="modal-label d-flex-center"
+                ><img src="/src/assets/modal/icons/product.svg" alt="product" />
+                Product photo</label
+              >
+              <div class="upload-box d-flex-col" id="uploadBox">
+                <img src="/src/assets/modal/icons/asset.svg" alt="asset" />
+                <div class="d-flex-col">
+                  <input
+                    type="file"
+                    id="fileInput"
+                    class="file-input"
+                    accept="image/*"
+                  />
+                  <label for="fileInput" class="file-label"
+                    >Click to upload</label
+                  >
+                  <p class="file-note">SVG, PNG, JPG or GIF (max. 800x400px)</p>
+                </div>
+              </div>
+              <div class="image-preview-container d-flex-col">
+                <div class="image-preview" id="imagePreview"></div>
+              </div>
+            </div>
+            <div>
+              <label class="modal-label d-flex-center"
+                ><img
+                  src="/src/assets/modal/icons/shopping-bag.svg"
+                  alt="category"
+                />
+                Category</label
+              >
+              <div class="dropdown-container">
+                <div class="dropdown-button" id="categoryDropdownButton">
+                  <span class="label selected" id="selectedCategory"
+                    >Select Category</span
+                  >
+                  <img
+                    src="/src/assets/modal/icons/chevron-down.svg"
+                    alt="chevron"
+                  />
+                </div>
+                <div class="dropdown-list" id="categoryDropdownList">
+                  <div class="dropdown-option">Accessories</div>
+                  <div class="dropdown-option">Clothing</div>
+                  <div class="dropdown-option">Cosmetics</div>
+                  <div class="dropdown-option">Telecommunication</div>
+                  <div class="dropdown-option">Note Book</div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <label class="modal-label d-flex-center"
+                ><img src="/src/assets/modal/icons/pricing.svg" alt="pricing" />
+                Price (in $)</label
+              >
+              <input
+                type="number"
+                id="productPrice"
+                class="modal-input"
+                placeholder="$0"
+                min="1"
+              />
+            </div>
+            <div>
+              <label class="modal-label d-flex-center"
+                ><img src="/src/assets/modal/icons/bag.svg" alt="" />
+                Company</label
+              >
+              <div class="dropdown-container">
+                <div class="dropdown-button" id="companyDropdownButton">
+                  <span class="label selected" id="selectedCompany"
+                    >Select Company</span
+                  >
+                  <img
+                    src="/src/assets/modal/icons/chevron-down.svg"
+                    alt="chevron"
+                  />
+                </div>
+                <div class="dropdown-list" id="companyDropdownList">
+                  <div class="dropdown-option" data-logo="google.svg">
+                    Google
+                  </div>
+                  <div class="dropdown-option" data-logo="facebook.svg">
+                    Facebook
+                  </div>
+                  <div class="dropdown-option" data-logo="twitter.svg">
+                    Twitter
+                  </div>
+                  <div class="dropdown-option" data-logo="spotify.svg">
+                    Spotify
+                  </div>
+                  <div class="dropdown-option" data-logo="pinterest.svg">
+                    Pinterest
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <label class="modal-label d-flex-center"
+                ><img src="/src/assets/modal/icons/check.svg" alt="" />
+                Status</label
+              >
+              <div class="dropdown-container">
+                <div class="dropdown-button" id="statusDropdownButton">
+                  <span class="label selected" id="selectedStatus"
+                    >Select Status</span
+                  >
+                  <img
+                    src="/src/assets/modal/icons/chevron-down.svg"
+                    alt="chevron"
+                  />
+                </div>
+                <div class="dropdown-list" id="statusDropdownList">
+                  <div class="dropdown-option">In Stock</div>
+                  <div class="dropdown-option">Out of stock</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="save-btn" id="saveBtn" disabled>Save</button>
+        </div>
+      </div>
+
+      <!-- Edit Product Modal -->
+      <div id="editModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn" onclick="closeEditModal()"
+            ><img src="/src/assets/modal/icons/cross.svg" alt="cross-icon"
+          /></span>
+          <h2 class="modal-title">Edit product</h2>
+
+          <div class="modal-fields">
+            <div>
+              <label class="modal-label d-flex-center"
+                ><img
+                  src="/src/assets/modal/icons/star.svg"
+                  alt="product-name"
+                />
+                Product name</label
+              >
+              <input
+                type="text"
+                id="editProductName"
+                class="modal-input"
+                placeholder="Enter product name"
+              />
+            </div>
+
+            <div>
+              <label class="modal-label d-flex-center"
+                ><img src="/src/assets/modal/icons/product.svg" alt="product" />
+                Product photo</label
+              >
+              <div class="upload-box d-flex-col" id="editUploadBox">
+                <img src="/src/assets/modal/icons/asset.svg" alt="asset" />
+                <div class="d-flex-col">
+                  <input
+                    type="file"
+                    id="editFileInput"
+                    class="file-input"
+                    accept="image/*"
+                  />
+                  <label for="editFileInput" class="file-label"
+                    >Click to upload</label
+                  >
+                  <p class="file-note">SVG, PNG, JPG or GIF (max. 800x400px)</p>
+                </div>
+              </div>
+              <div class="image-preview-container d-flex-col">
+                <div class="image-preview" id="editImagePreview"></div>
+              </div>
+            </div>
+
+            <div>
+              <label class="modal-label d-flex-center"
+                ><img
+                  src="/src/assets/modal/icons/shopping-bag.svg"
+                  alt="category"
+                />
+                Category</label
+              >
+              <div class="dropdown-container">
+                <div class="dropdown-button" id="editCategoryDropdownButton">
+                  <span class="label selected" id="editSelectedCategory"
+                    >Select Category</span
+                  >
+                  <img
+                    src="/src/assets/modal/icons/chevron-down.svg"
+                    alt="chevron"
+                  />
+                </div>
+                <div class="dropdown-list" id="editCategoryDropdownList">
+                  <div class="dropdown-option">Accessories</div>
+                  <div class="dropdown-option">Clothing</div>
+                  <div class="dropdown-option">Cosmetics</div>
+                  <div class="dropdown-option">Telecommunication</div>
+                  <div class="dropdown-option">Note Book</div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <label class="modal-label d-flex-center"
+                ><img src="/src/assets/modal/icons/pricing.svg" alt="pricing" />
+                Price (in $)</label
+              >
+              <input
+                type="number"
+                id="editProductPrice"
+                class="modal-input"
+                placeholder="$0"
+                min="1"
+              />
+            </div>
+
+            <div>
+              <label class="modal-label d-flex-center"
+                ><img src="/src/assets/modal/icons/bag.svg" alt="" />
+                Company</label
+              >
+              <div class="dropdown-container">
+                <div class="dropdown-button" id="editCompanyDropdownButton">
+                  <span class="label selected" id="editSelectedCompany"
+                    >Select Company</span
+                  >
+                  <img
+                    src="/src/assets/modal/icons/chevron-down.svg"
+                    alt="chevron"
+                  />
+                </div>
+                <div class="dropdown-list" id="editCompanyDropdownList">
+                  <div class="dropdown-option" data-logo="google.svg">
+                    Google
+                  </div>
+                  <div class="dropdown-option" data-logo="facebook.svg">
+                    Facebook
+                  </div>
+                  <div class="dropdown-option" data-logo="twitter.svg">
+                    Twitter
+                  </div>
+                  <div class="dropdown-option" data-logo="spotify.svg">
+                    Spotify
+                  </div>
+                  <div class="dropdown-option" data-logo="pinterest.svg">
+                    Pinterest
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <label class="modal-label d-flex-center"
+                ><img src="/src/assets/modal/icons/check.svg" alt="" />
+                Status</label
+              >
+              <div class="dropdown-container">
+                <div class="dropdown-button" id="editStatusDropdownButton">
+                  <span class="label selected" id="editSelectedStatus"
+                    >Select Status</span
+                  >
+                  <img
+                    src="/src/assets/modal/icons/chevron-down.svg"
+                    alt="chevron"
+                  />
+                </div>
+                <div class="dropdown-list" id="editStatusDropdownList">
+                  <div class="dropdown-option">In Stock</div>
+                  <div class="dropdown-option">Out of stock</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="save-btn" id="editSaveBtn" disabled>Save</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Apex-Charts -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <script src="/src/js/main.js"></script>
+    <script src="/src/js/product-list.js"></script>
+  </body>
+</html>

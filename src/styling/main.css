@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  /* Background */
+  --primary-bg: #081028;
+  --secondary-bg-color: #0b1739;
+  --light-green-bg: rgba(5, 193, 104, 0.2);
+  --light-red-bg: rgba(255, 90, 101, 0.2);
+  --dropdown-bg: #0a1330;
+  --dropdown-bg: #0a1330;
+  --dropdown-scroll-bg: #cb3cff;
+
+  /* Text Color */
+  --primary-color: #ffffff;
+  --secondary-color: #aeb9e1;
+  --selected-color: rgba(203, 60, 255, 1);
+  --green-color: rgba(20, 202, 116, 1);
+  --red-color: rgba(255, 90, 101, 1);
+
+  /* Border */
+  --primary-border: #0b1739;
+  --secondary-border: #343b4f;
+  --green-border: rgba(5, 193, 104, 0.2);
+  --red-border: rgba(255, 90, 101, 0.2);
+
+  /* Transitions */
+  --tran-02: all 0.2s ease;
+  --tran-03: all 0.3s ease;
+  --tran-04: all 0.4s ease;
+  --tran-05: all 0.5s ease;
+}
+
+/* Re-usable Classes Start */
+.d-flex-center {
+  display: flex;
+  align-items: center;
+}
+.d-flex-col {
+  display: flex;
+  flex-direction: column;
+}
+/* Re-usable Classes End */
+
+.container {
+  height: 100vh;
+  background-color: var(--primary-bg);
+}
+
+/* Sidebar Starts */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 300px;
+  transition: var(--tran-05);
+  box-shadow: 0 0 28px 0 rgba(1, 5, 17, 0.3);
+  border: 0.6px solid var(--primary-border);
+  z-index: 100;
+  justify-content: space-between;
+}
+
+.sidebar.close {
+  width: 88px;
+}
+
+.sidebar header {
+  justify-content: space-between;
+  padding: 1.5rem 1.5rem 1rem 1rem;
+}
+
+.sidebar.close header {
+  padding: 1.5rem 1rem 1rem 1rem;
+}
+
+.sidebar__image--text {
+  gap: 0.3rem;
+}
+
+.sidebar .sidebar--text {
+  display: block;
+  transform: var(--tran-03);
+  white-space: nowrap;
+}
+
+.sidebar .sidebar__image--text {
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+.sidebar.close .sidebar--text {
+  display: none;
+  transition: var(--tran-03);
+}
+
+.sidebar header .sidebar--toggle {
+  transition: var(--tran-03);
+  cursor: pointer;
+}
+
+.sidebar.close header .sidebar--toggle {
+  transform: rotate(180deg);
+}
+
+.sidebar__menu {
+  padding: 1rem 1.5rem 1rem 1rem;
+}
+
+.sidebar__nav--links {
+  list-style: none;
+}
+
+.sidebar__nav--link {
+  height: 50px;
+  margin-top: 10px;
+}
+
+.sidebar__nav--link > a {
+  gap: 0.6rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.sidebar__nav--link {
+  padding: 0 0 0 0.8rem;
+  border-radius: 4px;
+}
+
+.sidebar.close .sidebar__nav--links .sidebar__nav--link {
+  padding: 0;
+  justify-content: center;
+}
+
+.sidebar__nav--link,
+.sidebar__nav--link .icon {
+  fill: var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+.sidebar__nav--link:hover,
+.sidebar__nav--link:hover .icon {
+  fill: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.sidebar__nav--link.selected {
+  background-color: var(--secondary-bg-color);
+}
+
+.sidebar__nav--link.selected,
+.sidebar__nav--link.selected .icon {
+  fill: var(--selected-color);
+  color: var(--selected-color);
+}
+
+.sidebar__bottom {
+  padding-top: 1rem;
+  border-top: 1px solid var(--secondary-color);
+}
+
+.sidebar__menu--user {
+  padding: 0rem 1.5rem 1rem 1rem;
+  cursor: pointer;
+}
+
+.sidebar__menu--user > div {
+  justify-content: space-between;
+}
+
+.sidebar__menu--user > div > .user {
+  gap: 0.7rem;
+}
+
+.sidebar__menu--user > div > .user > .user--name {
+  color: var(--primary-color);
+}
+
+.sidebar.close .user--chevron-right {
+  display: none;
+}
+
+.sidebar.close .sidebar__menu--user > div {
+  justify-content: center;
+}
+/* Sidebar Ends */
