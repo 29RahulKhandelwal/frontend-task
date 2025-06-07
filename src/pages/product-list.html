@@ -4,11 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product List</title>
-    <link rel="stylesheet" href="src/styling/main.css" />
-    <link rel="stylesheet" href="src/styling/product-list.css" />
+    <link
+      rel="stylesheet"
+      href="https://29rahulkhandelwal.github.io/frontend-task/src/styling/main.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://29rahulkhandelwal.github.io/frontend-task/src/styling/product-list.css"
+    />
     <link
       rel="shortcut icon"
-      href="src/assets/sidebar/images/Logo.svg"
+      href="https://29rahulkhandelwal.github.io/frontend-task/src/assets/sidebar/images/Logo.svg"
       type="image/x-icon"
     />
   </head>
@@ -21,13 +27,16 @@
             <div>
               <div class="sidebar__image--text d-flex-center">
                 <span class="sidebar__image">
-                  <img src="/src/assets/sidebar/images/Logo.svg" alt="logo" />
+                  <img
+                    src="https://29rahulkhandelwal.github.io/frontend-task/src/assets/sidebar/images/Logo.svg"
+                    alt="logo"
+                  />
                 </span>
                 <div class="sidebar__image--text sidebar--text">Dashdark X</div>
               </div>
             </div>
             <img
-              src="/src/assets/sidebar/icons/chevron-left.svg"
+              src="https://29rahulkhandelwal.github.io/frontend-task/src/assets/sidebar/icons/chevron-left.svg"
               alt="chevron-left-icon"
               class="sidebar--toggle"
             />
@@ -36,7 +45,10 @@
             <div class="sidebar__menu--bar">
               <ul class="sidebar__nav--links">
                 <li class="sidebar__nav--link d-flex-center">
-                  <a href="/src/pages/dashboard.html" class="d-flex-center">
+                  <a
+                    href="https://29rahulkhandelwal.github.io/frontend-task/src/pages/dashboard.html"
+                    class="d-flex-center"
+                  >
                     <svg
                       class="icon"
                       width="14"
@@ -53,7 +65,10 @@
                   </a>
                 </li>
                 <li class="sidebar__nav--link d-flex-center selected">
-                  <a href="/src/pages/product-list.html" class="d-flex-center">
+                  <a
+                    href="https://29rahulkhandelwal.github.io/frontend-task/src/pages/product-list.html"
+                    class="d-flex-center"
+                  >
                     <svg
                       class="icon"
                       width="14"
@@ -77,11 +92,14 @@
           <div class="sidebar__menu--user">
             <div class="d-flex-center">
               <div class="user d-flex-center">
-                <img src="/src/assets/sidebar/images/user.svg" alt="user" />
+                <img
+                  src="https://29rahulkhandelwal.github.io/frontend-task/src/assets/sidebar/images/user.svg"
+                  alt="user"
+                />
                 <span class="sidebar--text user--name">John Carter</span>
               </div>
               <img
-                src="/src/assets/sidebar/icons/chevron-right.svg"
+                src="https://29rahulkhandelwal.github.io/frontend-task/src/assets/sidebar/icons/chevron-right.svg"
                 alt="chevron-right-icon"
                 class="user--chevron-right"
               />
@@ -101,7 +119,7 @@
               </div>
               <div class="product-list--searchbar d-flex-center">
                 <img
-                  src="/src/assets/product-list/icons/magnifier.svg"
+                  src="https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/magnifier.svg"
                   alt="magnifier-icon"
                 />
                 <input
@@ -144,7 +162,7 @@
                   <th class="sortable" onclick="sortTable('name', this)">
                     <div class="d-flex-center">
                       <img
-                        src="/src/assets/product-list/icons/star.svg"
+                        src="https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/star.svg"
                         alt="star-icon"
                       />
                       Product Name
@@ -153,7 +171,7 @@
                   <th class="sortable" onclick="sortTable('category', this)">
                     <div class="d-flex-center">
                       <img
-                        src="/src/assets/product-list/icons/shopping-bag.svg"
+                        src="https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/shopping-bag.svg"
                         alt="category"
                       />
                       Category
@@ -162,7 +180,7 @@
                   <th class="sortable" onclick="sortTable('price', this)">
                     <div class="d-flex-center">
                       <img
-                        src="/src/assets/product-list/icons/dollar.svg"
+                        src="https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/dollar.svg"
                         alt="dollar"
                       />
                       Price
@@ -171,7 +189,7 @@
                   <th class="sortable" onclick="sortTable('company', this)">
                     <div class="d-flex-center">
                       <img
-                        src="/src/assets/product-list/icons/bag.svg"
+                        src="https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/bag.svg"
                         alt="bag-icon"
                       />
                       Company
@@ -180,7 +198,7 @@
                   <th class="sortable" onclick="sortTable('status', this)">
                     <div class="d-flex-center">
                       <img
-                        src="/src/assets/product-list/icons/check.svg"
+                        src="https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/check.svg"
                         alt="status-icon"
                       />
                       Status
@@ -262,7 +280,9 @@
       <div id="productModal" class="modal">
         <div class="modal-content">
           <span class="close-btn" onclick="closeModal()"
-            ><img src="/src/assets/modal/icons/cross.svg" alt="cross-icon"
+            ><img
+              src="https://29rahulkhandelwal.github.io/frontend-task/src/assets/modal/icons/cross.svg"
+              alt="cross-icon"
           /></span>
           <h2 class="modal-title">Add new product</h2>
 
@@ -270,7 +290,7 @@
             <div>
               <label class="modal-label d-flex-center"
                 ><img
-                  src="/src/assets/modal/icons/star.svg"
+                  src="https://29rahulkhandelwal.github.io/frontend-task/src/assets/modal/icons/star.svg"
                   alt="product-name"
                 />
                 Product name</label
@@ -284,11 +304,17 @@
             </div>
             <div>
               <label class="modal-label d-flex-center"
-                ><img src="/src/assets/modal/icons/product.svg" alt="product" />
+                ><img
+                  src="https://29rahulkhandelwal.github.io/frontend-task/src/assets/modal/icons/product.svg"
+                  alt="product"
+                />
                 Product photo</label
               >
               <div class="upload-box d-flex-col" id="uploadBox">
-                <img src="/src/assets/modal/icons/asset.svg" alt="asset" />
+                <img
+                  src="https://29rahulkhandelwal.github.io/frontend-task/src/assets/modal/icons/asset.svg"
+                  alt="asset"
+                />
                 <div class="d-flex-col">
                   <input
                     type="file"
@@ -309,7 +335,7 @@
             <div>
               <label class="modal-label d-flex-center"
                 ><img
-                  src="/src/assets/modal/icons/shopping-bag.svg"
+                  src="https://29rahulkhandelwal.github.io/frontend-task/src/assets/modal/icons/shopping-bag.svg"
                   alt="category"
                 />
                 Category</label
@@ -320,7 +346,7 @@
                     >Select Category</span
                   >
                   <img
-                    src="/src/assets/modal/icons/chevron-down.svg"
+                    src="https://29rahulkhandelwal.github.io/frontend-task/src/assets/modal/icons/chevron-down.svg"
                     alt="chevron"
                   />
                 </div>
@@ -335,7 +361,10 @@
             </div>
             <div>
               <label class="modal-label d-flex-center"
-                ><img src="/src/assets/modal/icons/pricing.svg" alt="pricing" />
+                ><img
+                  src="https://29rahulkhandelwal.github.io/frontend-task/src/assets/modal/icons/pricing.svg"
+                  alt="pricing"
+                />
                 Price (in $)</label
               >
               <input
@@ -348,7 +377,10 @@
             </div>
             <div>
               <label class="modal-label d-flex-center"
-                ><img src="/src/assets/modal/icons/bag.svg" alt="" />
+                ><img
+                  src="https://29rahulkhandelwal.github.io/frontend-task/src/assets/modal/icons/bag.svg"
+                  alt=""
+                />
                 Company</label
               >
               <div class="dropdown-container">
@@ -357,7 +389,7 @@
                     >Select Company</span
                   >
                   <img
-                    src="/src/assets/modal/icons/chevron-down.svg"
+                    src="https://29rahulkhandelwal.github.io/frontend-task/src/assets/modal/icons/chevron-down.svg"
                     alt="chevron"
                   />
                 </div>
@@ -382,7 +414,10 @@
             </div>
             <div>
               <label class="modal-label d-flex-center"
-                ><img src="/src/assets/modal/icons/check.svg" alt="" />
+                ><img
+                  src="https://29rahulkhandelwal.github.io/frontend-task/src/assets/modal/icons/check.svg"
+                  alt=""
+                />
                 Status</label
               >
               <div class="dropdown-container">
@@ -391,7 +426,7 @@
                     >Select Status</span
                   >
                   <img
-                    src="/src/assets/modal/icons/chevron-down.svg"
+                    src="https://29rahulkhandelwal.github.io/frontend-task/src/assets/modal/icons/chevron-down.svg"
                     alt="chevron"
                   />
                 </div>
@@ -411,7 +446,9 @@
       <div id="editModal" class="modal">
         <div class="modal-content">
           <span class="close-btn" onclick="closeEditModal()"
-            ><img src="/src/assets/modal/icons/cross.svg" alt="cross-icon"
+            ><img
+              src="https://29rahulkhandelwal.github.io/frontend-task/src/assets/modal/icons/cross.svg"
+              alt="cross-icon"
           /></span>
           <h2 class="modal-title">Edit product</h2>
 
@@ -419,7 +456,7 @@
             <div>
               <label class="modal-label d-flex-center"
                 ><img
-                  src="/src/assets/modal/icons/star.svg"
+                  src="https://29rahulkhandelwal.github.io/frontend-task/src/assets/modal/icons/star.svg"
                   alt="product-name"
                 />
                 Product name</label
@@ -434,11 +471,17 @@
 
             <div>
               <label class="modal-label d-flex-center"
-                ><img src="/src/assets/modal/icons/product.svg" alt="product" />
+                ><img
+                  src="https://29rahulkhandelwal.github.io/frontend-task/src/assets/modal/icons/product.svg"
+                  alt="product"
+                />
                 Product photo</label
               >
               <div class="upload-box d-flex-col" id="editUploadBox">
-                <img src="/src/assets/modal/icons/asset.svg" alt="asset" />
+                <img
+                  src="https://29rahulkhandelwal.github.io/frontend-task/src/assets/modal/icons/asset.svg"
+                  alt="asset"
+                />
                 <div class="d-flex-col">
                   <input
                     type="file"
@@ -460,7 +503,7 @@
             <div>
               <label class="modal-label d-flex-center"
                 ><img
-                  src="/src/assets/modal/icons/shopping-bag.svg"
+                  src="https://29rahulkhandelwal.github.io/frontend-task/src/assets/modal/icons/shopping-bag.svg"
                   alt="category"
                 />
                 Category</label
@@ -471,7 +514,7 @@
                     >Select Category</span
                   >
                   <img
-                    src="/src/assets/modal/icons/chevron-down.svg"
+                    src="https://29rahulkhandelwal.github.io/frontend-task/src/assets/modal/icons/chevron-down.svg"
                     alt="chevron"
                   />
                 </div>
@@ -487,7 +530,10 @@
 
             <div>
               <label class="modal-label d-flex-center"
-                ><img src="/src/assets/modal/icons/pricing.svg" alt="pricing" />
+                ><img
+                  src="https://29rahulkhandelwal.github.io/frontend-task/src/assets/modal/icons/pricing.svg"
+                  alt="pricing"
+                />
                 Price (in $)</label
               >
               <input
@@ -501,7 +547,10 @@
 
             <div>
               <label class="modal-label d-flex-center"
-                ><img src="/src/assets/modal/icons/bag.svg" alt="" />
+                ><img
+                  src="https://29rahulkhandelwal.github.io/frontend-task/src/assets/modal/icons/bag.svg"
+                  alt=""
+                />
                 Company</label
               >
               <div class="dropdown-container">
@@ -510,7 +559,7 @@
                     >Select Company</span
                   >
                   <img
-                    src="/src/assets/modal/icons/chevron-down.svg"
+                    src="https://29rahulkhandelwal.github.io/frontend-task/src/assets/modal/icons/chevron-down.svg"
                     alt="chevron"
                   />
                 </div>
@@ -536,7 +585,10 @@
 
             <div>
               <label class="modal-label d-flex-center"
-                ><img src="/src/assets/modal/icons/check.svg" alt="" />
+                ><img
+                  src="https://29rahulkhandelwal.github.io/frontend-task/src/assets/modal/icons/check.svg"
+                  alt=""
+                />
                 Status</label
               >
               <div class="dropdown-container">
@@ -545,7 +597,7 @@
                     >Select Status</span
                   >
                   <img
-                    src="/src/assets/modal/icons/chevron-down.svg"
+                    src="https://29rahulkhandelwal.github.io/frontend-task/src/assets/modal/icons/chevron-down.svg"
                     alt="chevron"
                   />
                 </div>
@@ -565,7 +617,7 @@
     <!-- Apex-Charts -->
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
-    <script src="src/js/main.js"></script>
-    <script src="src/js/product-list.js"></script>
+    <script src="https://29rahulkhandelwal.github.io/frontend-task/src/js/main.js"></script>
+    <script src="https://29rahulkhandelwal.github.io/frontend-task/src/js/product-list.js"></script>
   </body>
 </html>

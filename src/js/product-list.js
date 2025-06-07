@@ -5,7 +5,8 @@ let products = [
     price: "$ 20",
     company: "Google",
     status: "In Stock",
-    image: "/src/assets/product-list/icons/photo.svg",
+    image:
+      "https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/photo.svg",
   },
   {
     name: "Mobile",
@@ -13,7 +14,8 @@ let products = [
     price: "$ 500",
     company: "Webflow",
     status: "Out of stock",
-    image: "/src/assets/product-list/icons/photo.svg",
+    image:
+      "https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/photo.svg",
   },
   {
     name: "Laptop",
@@ -21,7 +23,8 @@ let products = [
     price: "$ 800",
     company: "Facebook",
     status: "Out of stock",
-    image: "/src/assets/product-list/icons/photo.svg",
+    image:
+      "https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/photo.svg",
   },
   {
     name: "TV",
@@ -29,7 +32,8 @@ let products = [
     price: "$ 250",
     company: "Twitter",
     status: "In Stock",
-    image: "/src/assets/product-list/icons/photo.svg",
+    image:
+      "https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/photo.svg",
   },
   {
     name: "Camera",
@@ -37,7 +41,8 @@ let products = [
     price: "$ 100",
     company: "YouTube",
     status: "Out of stock",
-    image: "/src/assets/product-list/icons/photo.svg",
+    image:
+      "https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/photo.svg",
   },
   {
     name: "Perfume",
@@ -45,7 +50,8 @@ let products = [
     price: "$ 25",
     company: "Reddit",
     status: "In Stock",
-    image: "/src/assets/product-list/icons/photo.svg",
+    image:
+      "https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/photo.svg",
   },
   {
     name: "Ear pods",
@@ -53,7 +59,8 @@ let products = [
     price: "$ 45",
     company: "Spotify",
     status: "Out of stock",
-    image: "/src/assets/product-list/icons/photo.svg",
+    image:
+      "https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/photo.svg",
   },
   {
     name: "Wireless Charger",
@@ -61,7 +68,8 @@ let products = [
     price: "$ 10",
     company: "Pinterest",
     status: "In Stock",
-    image: "/src/assets/product-list/icons/photo.svg",
+    image:
+      "https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/photo.svg",
   },
   {
     name: "Torch",
@@ -69,7 +77,8 @@ let products = [
     price: "$ 20",
     company: "Twitch",
     status: "Out of stock",
-    image: "/src/assets/product-list/icons/photo.svg",
+    image:
+      "https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/photo.svg",
   },
   {
     name: "Tablet",
@@ -77,7 +86,8 @@ let products = [
     price: "$ 400",
     company: "Google",
     status: "In Stock",
-    image: "/src/assets/product-list/icons/photo.svg",
+    image:
+      "https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/photo.svg",
   },
   {
     name: "Speaker",
@@ -85,7 +95,8 @@ let products = [
     price: "$ 60",
     company: "Twitch",
     status: "In Stock",
-    image: "/src/assets/product-list/icons/photo.svg",
+    image:
+      "https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/photo.svg",
   },
   {
     name: "Fan",
@@ -93,7 +104,8 @@ let products = [
     price: "$ 35",
     company: "YouTube",
     status: "Out of stock",
-    image: "/src/assets/product-list/icons/photo.svg",
+    image:
+      "https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/photo.svg",
   },
   {
     name: "Mouse",
@@ -101,7 +113,8 @@ let products = [
     price: "$ 15",
     company: "YouTube",
     status: "In Stock",
-    image: "/src/assets/product-list/icons/photo.svg",
+    image:
+      "https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/photo.svg",
   },
 ];
 
@@ -129,7 +142,8 @@ function displayTable() {
     <td class="product--cell d-flex-center">
     <div  class="product__table--product-img">
       <img src="${
-        item.image || "/src/assets/product-list/icons/photo.svg"
+        item.image ||
+        "https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/photo.svg"
       }" alt="Product Image"/>
     </div>
     <span class="product__table--product-name">${item.name}</span>
@@ -139,16 +153,26 @@ function displayTable() {
     <td class="product__table--product-company d-flex-center"><img 
     src=${
       {
-        google: "/src/assets/product-list/icons/Google.svg",
-        webflow: "/src/assets/product-list/icons/Webflow.svg",
-        facebook: "/src/assets/product-list/icons/facebook.svg",
-        twitter: "/src/assets/product-list/icons/twitter.svg",
-        youtube: "/src/assets/product-list/icons/youtube.svg",
-        reddit: "/src/assets/product-list/icons/reddit.svg",
-        spotify: "/src/assets/product-list/icons/spotify.svg",
-        twitch: "/src/assets/product-list/icons/twitch.svg",
-        pinterest: "/src/assets/product-list/icons/pinterest.svg",
-        apple: "/src/assets/product-list/icons/Apple.svg",
+        google:
+          "https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/Google.svg",
+        webflow:
+          "https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/Webflow.svg",
+        facebook:
+          "https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/facebook.svg",
+        twitter:
+          "https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/twitter.svg",
+        youtube:
+          "https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/youtube.svg",
+        reddit:
+          "https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/reddit.svg",
+        spotify:
+          "https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/spotify.svg",
+        twitch:
+          "https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/twitch.svg",
+        pinterest:
+          "https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/pinterest.svg",
+        apple:
+          "https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/Apple.svg",
       }[String(item.company).toLowerCase()] || ""
     } 
     alt="company-logo"
@@ -161,10 +185,10 @@ function displayTable() {
     <td>
       <div class="product__table--product-action-icons">
         <div class="icon" title="Edit">
-          <img src="/src/assets/product-list/icons/pencil.svg" alt="edit-product"><span class="tooltip">Edit Product</span>
+          <img src="https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/pencil.svg" alt="edit-product"><span class="tooltip">Edit Product</span>
         </div>
         <div class="icon delete-icon" title="Delete">
-          <img src="/src/assets/product-list/icons/bin.svg" alt="delete-product"><span class="tooltip">Delete Product</span>
+          <img src="https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/bin.svg" alt="delete-product"><span class="tooltip">Delete Product</span>
         </div>
       </div>
     </td>

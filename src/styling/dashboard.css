@@ -339,7 +339,7 @@
 }
 
 .dropdown-list .selected::after {
-  content: url("/src/assets/dashboard/icons/tick.svg");
+  content: url("https://29rahulkhandelwal.github.io/frontend-task/src/assets/dashboard/icons/tick.svg");
   position: absolute;
   right: 15px;
 }

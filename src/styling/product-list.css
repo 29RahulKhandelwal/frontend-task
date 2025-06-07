@@ -183,15 +183,15 @@ th.sortable > div {
 }
 
 th.sortable > div::after {
-  content: url("/src/assets/product-list/icons/sort.svg");
+  content: url("https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/sort.svg");
 }
 
 th.sortable.asc > div::after {
-  content: url("/src/assets/product-list/icons/asc.svg");
+  content: url("https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/asc.svg");
 }
 
 th.sortable.desc > div::after {
-  content: url("/src/assets/product-list/icons/desc.svg");
+  content: url("https://29rahulkhandelwal.github.io/frontend-task/src/assets/product-list/icons/desc.svg");
 }
 
 #product__table--body > tr:nth-child(odd) {
@@ -644,7 +644,7 @@ td {
 }
 
 .dropdown-list .selected::after {
-  content: url("/src/assets/dashboard/icons/tick.svg");
+  content: url("https://29rahulkhandelwal.github.io/frontend-task/src/assets/dashboard/icons/tick.svg");
   position: absolute;
   right: 15px;
 }
